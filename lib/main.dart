@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    timer = Timer.periodic(Duration(seconds: 60), (Timer t) => addValue());
+    timer = Timer.periodic(Duration(seconds: 120), (Timer t) => addValue());
     updateUI(widget.rates);
   }
 
@@ -238,12 +238,12 @@ class BottomCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 8.0),
-      child: Align(
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.only(bottom: 8.0, left: 5),
         child: Container(
-          width: 300,
-          height: 30,
+          width: 310,
+          height: 31,
           child: Stack(
             overflow: Overflow.visible,
             children: <Widget>[
@@ -268,8 +268,8 @@ class BottomCard extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.only(bottom: 3.0),
                             child: Container(
-                              width: 15,
-                              height: 15,
+                              width: 17,
+                              height: 17,
                               child: Image(image: AssetImage('assets/$iconName')),
                               decoration: BoxDecoration(
                                 color: Colors.redAccent,
@@ -286,7 +286,7 @@ class BottomCard extends StatelessWidget {
                           ),
                           Container(
                             height: 30,
-                            width: 175,
+                            width: 165,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
@@ -304,7 +304,7 @@ class BottomCard extends StatelessWidget {
                                   curFulName,
                                   style: TextStyle(
                                       fontWeight: FontWeight.w600,
-                                      fontSize: 8,
+                                      fontSize: 9,
                                     color: Colors.grey
                                   ),
                                 ),
@@ -312,7 +312,7 @@ class BottomCard extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            width: 65,
+                            width: 70,
                             height: 30,
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
@@ -329,7 +329,7 @@ class BottomCard extends StatelessWidget {
                                   'Buy',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w600,
-                                      fontSize: 6,
+                                      fontSize: 9,
                                       color: Color(0xFF84C9CB),
                                   ),
                                 ),
@@ -337,7 +337,7 @@ class BottomCard extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            width: 35,
+                            width: 40,
                             height: 30,
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
@@ -354,7 +354,7 @@ class BottomCard extends StatelessWidget {
                                   'Sell',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w600,
-                                      fontSize: 6,
+                                      fontSize: 9,
                                       color: Colors.red.shade200
                                   ),
                                 ),
