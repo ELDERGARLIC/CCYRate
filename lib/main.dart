@@ -266,7 +266,7 @@ class BottomCard extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
                           Padding(
-                            padding: const EdgeInsets.only(bottom: 3.0),
+                            padding: const EdgeInsets.only(bottom: 3.0, left: 5),
                             child: Container(
                               width: 17,
                               height: 17,
@@ -286,7 +286,7 @@ class BottomCard extends StatelessWidget {
                           ),
                           Container(
                             height: 30,
-                            width: 165,
+                            width: 155,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
@@ -312,7 +312,7 @@ class BottomCard extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            width: 70,
+                            width: 71,
                             height: 30,
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
@@ -337,7 +337,7 @@ class BottomCard extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            width: 40,
+                            width: 45,
                             height: 30,
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.start,
