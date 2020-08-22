@@ -26,8 +26,8 @@ class TopCard extends StatelessWidget {
             print(curName); //TODO: PAGE CHANGING ACTION
           },
           child: Container(
-            height: 205.0,
-            width: 164.0,
+            height: 210.0,
+            width: 168.0,
             decoration: BoxDecoration(
               color: Colors.white, //background color of box
               borderRadius: BorderRadius.circular(15),
@@ -77,223 +77,199 @@ class CardData extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        Padding(
-          padding: const EdgeInsets.only(top: 10.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              SizedBox(
-                width: 20,
-              ),
-              Container(
-                width: 60,
-                child: Text(
-                  '$curBuyPrice T',
-                  style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      color: Color(0xFF84C9CB),
+    return Padding(
+      padding: const EdgeInsets.only(left: 20, right: 10, bottom: 5),
+      child: Column(
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.only(top: 10.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  width: 73,
+                  child: Text(
+                    '$curBuyPrice T',
+                    style: TextStyle(
+                        fontWeight: FontWeight.w700,
+                        color: Color(0xFF84C9CB),
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              Container(
-                width: 60,
-                child: Text(
-                  '$curSellPrice T',
-                  style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      color: Colors.red.shade200
+                Container(
+                  width: 65,
+                  child: Text(
+                    '$curSellPrice T',
+                    style: TextStyle(
+                        fontWeight: FontWeight.w700,
+                        color: Colors.red.shade200
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(top: 1.0),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              SizedBox(
-                width: 20,
-              ),
-              Container(
-                width: 55,
-                child: Text(
-                  'BUY',
-                  style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 7,
-                      color: Colors.grey
+          Padding(
+            padding: const EdgeInsets.only(top: 2.0),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  width: 58,
+                  child: Text(
+                    'BUY',
+                    style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 7,
+                        color: Colors.grey
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(
-                width: 15,
-              ),
-              Container(
-                width: 55,
-                child: Text(
-                  'SELL',
-                  style: TextStyle(
-                      fontSize: 7,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.grey
+                SizedBox(
+                  width: 15,
+                ),
+                Container(
+                  width: 65,
+                  child: Text(
+                    'SELL',
+                    style: TextStyle(
+                        fontSize: 7,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.grey
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(top: 10.0),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              SizedBox(
-                width: 20,
-              ),
-              Container(
-                width: 55,
-                child: Text(
-                  '$curMaxBuyPrice T',
-                  style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 10
+          Padding(
+            padding: const EdgeInsets.only(top: 11.0),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                Container(
+                  width: 73,
+                  child: Text(
+                    '$curMaxBuyPrice T',
+                    style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 10
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(
-                width: 15,
-              ),
-              Container(
-                width: 55,
-                child: Text(
-                  '$curMaxSelPrice T',
-                  style: TextStyle(
-                      fontSize: 10,
-                      fontWeight: FontWeight.w600
+                Container(
+                  width: 65,
+                  child: Text(
+                    '$curMaxSelPrice T',
+                    style: TextStyle(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w600
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(top: 1.0),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              SizedBox(
-                width: 20,
-              ),
-              Container(
-                width: 55,
-                child: Text(
-                  'MAX BUY',
-                  style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 7,
-                      color: Colors.grey
+          Padding(
+            padding: const EdgeInsets.only(top: 2.0),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Container(
+                  width: 58,
+                  child: Text(
+                    'MAX BUY',
+                    style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 7,
+                        color: Colors.grey
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(
-                width: 15,
-              ),
-              Container(
-                width: 55,
-                child: Text(
-                  'MAX SELL',
-                  style: TextStyle(
-                      fontSize: 7,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.grey
+                SizedBox(
+                  width: 15,
+                ),
+                Container(
+                  width: 65,
+                  child: Text(
+                    'MAX SELL',
+                    style: TextStyle(
+                        fontSize: 7,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.grey
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(top: 10.0),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              SizedBox(
-                width: 20,
-              ),
-              Container(
-                width: 55,
-                child: Text(
-                  '$curMinBuyPrice T',
-                  style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 10
+          Padding(
+            padding: const EdgeInsets.only(top: 11.0),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                Container(
+                  width: 73,
+                  child: Text(
+                    '$curMinBuyPrice T',
+                    style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 10
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(
-                width: 15,
-              ),
-              Container(
-                width: 55,
-                child: Text(
-                  '$curMinSelPrice T',
-                  style: TextStyle(
-                      fontSize: 10,
-                      fontWeight: FontWeight.w600
+                Container(
+                  width: 65,
+                  child: Text(
+                    '$curMinSelPrice T',
+                    style: TextStyle(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w600
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(top: 1.0),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              SizedBox(
-                width: 20,
-              ),
-              Container(
-                width: 55,
-                child: Text(
-                  'MIN BUY',
-                  style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 7,
-                      color: Colors.grey
+          Padding(
+            padding: const EdgeInsets.only(top: 1.0),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                Container(
+                  width: 58,
+                  child: Text(
+                    'MIN BUY',
+                    style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 7,
+                        color: Colors.grey
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(
-                width: 15,
-              ),
-              Container(
-                width: 55,
-                child: Text(
-                  'MIN SELL',
-                  style: TextStyle(
-                      fontSize: 7,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.grey
+                SizedBox(
+                  width: 15,
+                ),
+                Container(
+                  width: 65,
+                  child: Text(
+                    'MIN SELL',
+                    style: TextStyle(
+                        fontSize: 7,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.grey
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

@@ -384,7 +384,7 @@ class BottomTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        width: 205,
+        width: 220,
         height: 70,
         child: Stack(
           overflow: Overflow.visible,
