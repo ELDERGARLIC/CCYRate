@@ -75,6 +75,15 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.grey.shade50,
+        child: Icon(
+          Icons.refresh,
+        color: Colors.grey.shade400,
+      ),
+        onPressed: (){
+         Navigator.pushNamed(context, '/loading');
+        }),
       backgroundColor: Colors.white,
       body: SafeArea(
           child: Center(
