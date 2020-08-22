@@ -19,7 +19,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
 
   void getLocationData() async {
     var curData = await RatesModel().getCurRates();
-
+    Navigator.pop(context);
     Navigator.push(context, MaterialPageRoute(builder: (context) {
       return HomePage(
         rates: curData,
