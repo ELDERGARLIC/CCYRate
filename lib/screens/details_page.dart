@@ -2,7 +2,18 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DetailsPage extends StatelessWidget {
-  DetailsPage({@required this.curName, @required this.curFullName, @required this.curBuyPrice, @required this.curSellPrice, @required this.curLastUpdateDate, @required this.curMinSelPrice, @required this.curMaxSelPrice, @required this.curMinBuyPrice, @required this.curMaxBuyPrice,@required this.logoName,});
+  DetailsPage({
+    @required this.curName,
+    @required this.curFullName,
+    @required this.curBuyPrice,
+    @required this.curSellPrice,
+    @required this.curLastUpdateDate,
+    @required this.curMinSelPrice,
+    @required this.curMaxSelPrice,
+    @required this.curMinBuyPrice,
+    @required this.curMaxBuyPrice,
+    @required this.logoName,
+  });
 
   final String curName;
   final String curFullName;
@@ -24,7 +35,7 @@ class DetailsPage extends StatelessWidget {
         child: Column(
           children: <Widget>[
             GestureDetector(
-              onTap: (){
+              onTap: () {
                 print(curName);
               },
               child: Column(
@@ -33,7 +44,15 @@ class DetailsPage extends StatelessWidget {
                   ChosenLogo(assetName: logoName),
                   ChosenTitle(chosenTitle: curName),
                   ChosenSubTitle(subTitle: curFullName),
-                  CardData(curSellPrice: curSellPrice, curMinSelPrice: curMinSelPrice, curMinBuyPrice: curMinBuyPrice, curMaxSelPrice: curMaxSelPrice, curMaxBuyPrice: curMaxBuyPrice, curLastUpdateDate: curLastUpdateDate, curBuyPrice: curBuyPrice,),
+                  CardData(
+                    curSellPrice: curSellPrice,
+                    curMinSelPrice: curMinSelPrice,
+                    curMinBuyPrice: curMinBuyPrice,
+                    curMaxSelPrice: curMaxSelPrice,
+                    curMaxBuyPrice: curMaxBuyPrice,
+                    curLastUpdateDate: curLastUpdateDate,
+                    curBuyPrice: curBuyPrice,
+                  ),
                 ],
               ),
             ),
@@ -49,8 +68,14 @@ class DetailsPage extends StatelessWidget {
 }
 
 class CardData extends StatelessWidget {
-
-  CardData({ @required this.curBuyPrice, @required this.curSellPrice, @required this.curLastUpdateDate, @required this.curMinSelPrice, @required this.curMaxSelPrice, @required this.curMinBuyPrice, @required this.curMaxBuyPrice});
+  CardData(
+      {@required this.curBuyPrice,
+      @required this.curSellPrice,
+      @required this.curLastUpdateDate,
+      @required this.curMinSelPrice,
+      @required this.curMaxSelPrice,
+      @required this.curMinBuyPrice,
+      @required this.curMaxBuyPrice});
 
   final String curBuyPrice;
   final String curSellPrice;
@@ -91,9 +116,7 @@ class CardData extends StatelessWidget {
                 child: Text(
                   '$curSellPrice T',
                   style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      color: Colors.red.shade200
-                  ),
+                      fontWeight: FontWeight.w700, color: Colors.red.shade200),
                 ),
               ),
             ],
@@ -114,8 +137,7 @@ class CardData extends StatelessWidget {
                   style: TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 7,
-                      color: Colors.grey
-                  ),
+                      color: Colors.grey),
                 ),
               ),
               SizedBox(
@@ -128,8 +150,7 @@ class CardData extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 7,
                       fontWeight: FontWeight.w600,
-                      color: Colors.grey
-                  ),
+                      color: Colors.grey),
                 ),
               ),
             ],
@@ -148,10 +169,7 @@ class CardData extends StatelessWidget {
                 width: 55,
                 child: Text(
                   '$curMaxSelPrice T',
-                  style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 10
-                  ),
+                  style: TextStyle(fontWeight: FontWeight.w600, fontSize: 10),
                 ),
               ),
               SizedBox(
@@ -161,10 +179,7 @@ class CardData extends StatelessWidget {
                 width: 55,
                 child: Text(
                   '$curMaxBuyPrice T',
-                  style: TextStyle(
-                      fontSize: 10,
-                      fontWeight: FontWeight.w600
-                  ),
+                  style: TextStyle(fontSize: 10, fontWeight: FontWeight.w600),
                 ),
               ),
             ],
@@ -185,8 +200,7 @@ class CardData extends StatelessWidget {
                   style: TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 7,
-                      color: Colors.grey
-                  ),
+                      color: Colors.grey),
                 ),
               ),
               SizedBox(
@@ -199,8 +213,7 @@ class CardData extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 7,
                       fontWeight: FontWeight.w600,
-                      color: Colors.grey
-                  ),
+                      color: Colors.grey),
                 ),
               ),
             ],
@@ -219,10 +232,7 @@ class CardData extends StatelessWidget {
                 width: 55,
                 child: Text(
                   '$curMinSelPrice T',
-                  style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 10
-                  ),
+                  style: TextStyle(fontWeight: FontWeight.w600, fontSize: 10),
                 ),
               ),
               SizedBox(
@@ -232,10 +242,7 @@ class CardData extends StatelessWidget {
                 width: 55,
                 child: Text(
                   '$curMinBuyPrice T',
-                  style: TextStyle(
-                      fontSize: 10,
-                      fontWeight: FontWeight.w600
-                  ),
+                  style: TextStyle(fontSize: 10, fontWeight: FontWeight.w600),
                 ),
               ),
             ],
@@ -257,8 +264,7 @@ class CardData extends StatelessWidget {
                   style: TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 7,
-                      color: Colors.grey
-                  ),
+                      color: Colors.grey),
                 ),
               ),
               SizedBox(
@@ -271,8 +277,7 @@ class CardData extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 7,
                       fontWeight: FontWeight.w600,
-                      color: Colors.grey
-                  ),
+                      color: Colors.grey),
                 ),
               ),
             ],
@@ -284,7 +289,6 @@ class CardData extends StatelessWidget {
 }
 
 class ChosenSubTitle extends StatelessWidget {
-
   ChosenSubTitle({@required this.subTitle});
 
   final String subTitle;
@@ -293,16 +297,12 @@ class ChosenSubTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       subTitle,
-      style: TextStyle(
-          fontSize: 9,
-          fontWeight: FontWeight.w500
-      ),
+      style: TextStyle(fontSize: 9, fontWeight: FontWeight.w500),
     );
   }
 }
 
 class ChosenTitle extends StatelessWidget {
-
   ChosenTitle({this.chosenTitle});
 
   final String chosenTitle;
@@ -313,17 +313,13 @@ class ChosenTitle extends StatelessWidget {
       padding: const EdgeInsets.all(5.0),
       child: Text(
         chosenTitle,
-        style: TextStyle(
-            fontSize: 12,
-            fontWeight: FontWeight.w600
-        ),
+        style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600),
       ),
     );
   }
 }
 
 class ChosenLogo extends StatelessWidget {
-
   ChosenLogo({@required this.assetName});
 
   final String assetName;
@@ -336,11 +332,8 @@ class ChosenLogo extends StatelessWidget {
           width: 35,
           height: 35,
           decoration: BoxDecoration(
-              color: Colors.black,
-              borderRadius: BorderRadius.circular(50)
-          ),
-          child: Image(image: AssetImage('assets/$assetName'))
-      ),
+              color: Colors.black, borderRadius: BorderRadius.circular(50)),
+          child: Image(image: AssetImage('assets/$assetName'))),
     );
   }
 }
