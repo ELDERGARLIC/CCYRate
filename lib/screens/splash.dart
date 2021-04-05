@@ -3,14 +3,14 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:forexproject/services/rates.dart';
 import '../main.dart';
 
-class LoadingScreen extends StatefulWidget {
+class Splash extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _LoadingScreenState();
+    return _SplashState();
   }
 }
 
-class _LoadingScreenState extends State<LoadingScreen> {
+class _SplashState extends State<Splash> {
   @override
   void initState() {
     super.initState();
@@ -31,11 +31,22 @@ class _LoadingScreenState extends State<LoadingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFF222222),
       body: Center(
-        child: SpinKitDoubleBounce(
-          color: Colors.grey.shade200,
-          size: 100.0,
-        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              width: 125,
+              height: 125,
+              child: Image.asset('assets/Ccyrate.png'),
+            ),
+            SpinKitDoubleBounce(
+              color: Colors.grey.shade800,
+              size: 25.0,
+            ),
+          ],
+        )
       ),
     );
   }

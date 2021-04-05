@@ -10,7 +10,6 @@ class TestPage extends StatefulWidget {
 }
 
 class _TestPageState extends State<TestPage> {
-
   Timer timer;
   int counter = 0;
 
@@ -41,9 +40,7 @@ class _TestPageState extends State<TestPage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(counter.toString())
-          ],
+          children: <Widget>[Text(counter.toString())],
         ),
       ),
     );

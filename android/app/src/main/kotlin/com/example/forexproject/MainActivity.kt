@@ -1,4 +1,4 @@
-package com.example.forexproject
+package com.maxellm.ccyrate
 
 import io.flutter.embedding.android.FlutterActivity
 
